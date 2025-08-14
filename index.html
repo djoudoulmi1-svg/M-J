@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love Meysem ❤️🌸</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    body {
+        margin: 0;
+        height: 100vh;
+        background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Great Vibes', cursive;
+        color: white;
+        text-align: center;
+    }
+    h1 {
+        font-size: 4em;
+        text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d;
+        animation: glow 2s infinite alternate;
+    }
+    h2 {
+        font-size: 2em;
+        text-shadow: 0 0 10px #ffe66d, 0 0 20px #ffe66d;
+        margin-top: -10px;
+        animation: fadeIn 3s infinite alternate;
+    }
+    @keyframes glow {
+        from { text-shadow: 0 0 5px #ff4d6d, 0 0 10px #ff4d6d; }
+        to { text-shadow: 0 0 20px #ff1a4d, 0 0 40px #ff1a4d; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0.7; }
+        to { opacity: 1; }
+    }
+    .floating {
+        position: absolute;
+        animation: floatUp 8s linear infinite;
+        font-size: 2em;
+        pointer-events: none;
+    }
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+    audio { display: none; }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background: #ff4d6d;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #ff1a4d;
+        transform: scale(1.05);
+    }
+    .message-box {
+        max-width: 600px;
+        background: rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        text-shadow: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(6px);
+    }
+</style>
+</head>
+<body>
+    <h1>To My Love ❤️ Meysem</h1>
+    <h2>Forever & Always 🌸</h2>
+
+    <div class="message-box">
+        Klchi bda mn lparty t3 lpool ki knti dirili hada lmostach w 9tili tchbh l papa.
+        Nwal ana hadik l7dha 7sit b7aja jihtk psq knti awl tfla n7ki m3aha w dirli haka.
+        W mnnsach nhar li l3bna t3 nti mtchofich w ana ndik bch thbti fi topogon.
+        Hadak nhar vri mnnsahch.  
+        Hada wach 7bit n9olk w 9olili 3jbk sit hada wla lala.
+        Hada ana rani 5dmtou w7di ki 9tili 3la hadak li b3tlk fi snap 4rt mno w rani drtlk hada nchalh y3jbk ❤️
+    </div>
+
+    <button onclick="playMusic()">💖 Play Our Song</button>
+
+    <audio id="bgm" loop>
+        <source src="Indila - Love Story (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+<script>
+const symbols = ["💖", "💗", "💘", "🌹", "🌺", "🌸", "🌷"];
+function createFloatingSymbol() {
+    const span = document.createElement("span");
+    span.classList.add("floating");
+    span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.animationDuration = (5 + Math.random() * 5) + "s";
+    document.body.appendChild(span);
+    setTimeout(() => span.remove(), 10000);
+}
+setInterval(createFloatingSymbol, 300);
+
+function playMusic() {
+    document.getElementById('bgm').play();
+}
+</script>
+</body>
+</html>
